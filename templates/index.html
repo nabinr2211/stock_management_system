@@ -1,0 +1,295 @@
+{% extends 'base.html'%}
+{% block content%}
+
+
+<div class="container-fluid">
+    <div class="row">
+
+
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+            <div class="sidebar-sticky pt-3">
+                <h2 class="font-weight-bold">Dashboard</h2>
+                <hr class="bg-dark">
+                <div class="container">
+                    <div class="pt-3">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-success dropdown-toggle side_btn" type="button"
+                                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                Categories
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="{% url 'ims:add_categories'%}">Add Categories</a>
+                                <a class="dropdown-item" href="{% url 'ims:categories_list'%}">Categories List</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-3">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-success dropdown-toggle side_btn" type="button"
+                                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                Product
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="{% url 'ims:add_product'%}">Add Product</a>
+                                <a class="dropdown-item" href="{% url 'ims:product_list'%}">Product List</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-3">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-success dropdown-toggle side_btn" type="button"
+                                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                Supplier
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="{% url 'ims:add_supplier'%}">Add Suppliers</a>
+                                <a class="dropdown-item" href="{% url 'ims:supplier_list'%}">Suppliers List</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-3">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-success dropdown-toggle side_btn" type="button"
+                                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                Purchase
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="{% url 'ims:add_purchase'%}">Purchase</a>
+                                <a class="dropdown-item" href="{% url 'ims:purchase_list'%}">Purchase list</a>
+                                <a class="dropdown-item" href="{% url 'ims:daily_purchase_list'%}">Daily Purchase list</a>
+                                <a class="dropdown-item" href="{% url 'ims:monthly_purchase_list'%}">Monthly Purchase list</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-3">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-success dropdown-toggle side_btn" type="button"
+                                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                Sales
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="{% url 'ims:add_sales'%}">Sales </a>
+                                <a class="dropdown-item" href="{% url 'ims:sales_list'%}">Sales List</a>
+                                <a class="dropdown-item" href="{% url 'ims:daily_sales_list'%}">Daily Sales List</a>
+                                <a class="dropdown-item" href="{% url 'ims:monthly_sales_list'%}">Monthly Sales List</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-3">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-success dropdown-toggle side_btn" type="button"
+                                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                Expenses
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="">Add Expenses
+                                    <a class="dropdown-item" href="#">Daily Expenses Report</a>
+                                    <a class="dropdown-item" href="#">Monthly Expenses Report</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-3">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-success dropdown-toggle side_btn" type="button"
+                                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                Reports
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="">Purchase Report</a>
+                                <a class="dropdown-item" href="#">Sales Reports </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+            <div class="container">
+                <div class="row">
+                    <div class="container my-5 pt-5">
+                        <div class="row">
+                            <div class="col-md-3 com-sm-6 shadow rounded-lg ml-5">
+                                <div class="container box">
+                                    <div class="mb-3">
+                                        <h4>Purchase Amount</h4>
+                                    </div>
+                                    <span class="my-5">
+                                        RS: 23423
+                                    </span>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 com-sm-6 shadow rounded-lg ml-5">
+                                <div class="container box">
+                                    <div class="mb-3">
+                                        <h4>Sales Amount</h4>
+                                    </div>
+                                    <span class="my-5">
+                                        RS: 23423
+                                    </span>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 com-sm-6 shadow rounded-lg ml-5">
+                                <div class="container box">
+                                    <div class="mb-3">
+                                        <h4>Expenses Amount</h4>
+                                    </div>
+                                    <span class="my-5">
+                                        RS: 23423
+                                    </span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <div class="container">
+             <h2>Stock Items</h2>
+            <div class="table-responsive">
+                <table class="table table-striped table-sm">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Header</th>
+                        <th>Header</th>
+                        <th>Header</th>
+                        <th>Header</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1,001</td>
+                        <td>Lorem</td>
+                        <td>ipsum</td>
+                        <td>dolor</td>
+                        <td>sit</td>
+                    </tr>
+                    <tr>
+                        <td>1,002</td>
+                        <td>amet</td>
+                        <td>consectetur</td>
+                        <td>adipiscing</td>
+                        <td>elit</td>
+                    </tr>
+                    <tr>
+                        <td>1,003</td>
+                        <td>Integer</td>
+                        <td>nec</td>
+                        <td>odio</td>
+                        <td>Praesent</td>
+                    </tr>
+                    <tr>
+                        <td>1,003</td>
+                        <td>libero</td>
+                        <td>Sed</td>
+                        <td>cursus</td>
+                        <td>ante</td>
+                    </tr>
+                    <tr>
+                        <td>1,004</td>
+                        <td>dapibus</td>
+                        <td>diam</td>
+                        <td>Sed</td>
+                        <td>nisi</td>
+                    </tr>
+                    <tr>
+                        <td>1,005</td>
+                        <td>Nulla</td>
+                        <td>quis</td>
+                        <td>sem</td>
+                        <td>at</td>
+                    </tr>
+                    <tr>
+                        <td>1,006</td>
+                        <td>nibh</td>
+                        <td>elementum</td>
+                        <td>imperdiet</td>
+                        <td>Duis</td>
+                    </tr>
+                    <tr>
+                        <td>1,007</td>
+                        <td>sagittis</td>
+                        <td>ipsum</td>
+                        <td>Praesent</td>
+                        <td>mauris</td>
+                    </tr>
+                    <tr>
+                        <td>1,008</td>
+                        <td>Fusce</td>
+                        <td>nec</td>
+                        <td>tellus</td>
+                        <td>sed</td>
+                    </tr>
+                    <tr>
+                        <td>1,009</td>
+                        <td>augue</td>
+                        <td>semper</td>
+                        <td>porta</td>
+                        <td>Mauris</td>
+                    </tr>
+                    <tr>
+                        <td>1,010</td>
+                        <td>massa</td>
+                        <td>Vestibulum</td>
+                        <td>lacinia</td>
+                        <td>arcu</td>
+                    </tr>
+                    <tr>
+                        <td>1,011</td>
+                        <td>eget</td>
+                        <td>nulla</td>
+                        <td>Class</td>
+                        <td>aptent</td>
+                    </tr>
+                    <tr>
+                        <td>1,012</td>
+                        <td>taciti</td>
+                        <td>sociosqu</td>
+                        <td>ad</td>
+                        <td>litora</td>
+                    </tr>
+                    <tr>
+                        <td>1,013</td>
+                        <td>torquent</td>
+                        <td>per</td>
+                        <td>conubia</td>
+                        <td>nostra</td>
+                    </tr>
+                    <tr>
+                        <td>1,014</td>
+                        <td>per</td>
+                        <td>inceptos</td>
+                        <td>himenaeos</td>
+                        <td>Curabitur</td>
+                    </tr>
+                    <tr>
+                        <td>1,015</td>
+                        <td>sodales</td>
+                        <td>ligula</td>
+                        <td>in</td>
+                        <td>libero</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        </main>
+    </div>
+</div>
+{% endblock %}

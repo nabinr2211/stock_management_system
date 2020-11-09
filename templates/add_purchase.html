@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+{% load crispy_forms_tags%}
+{% block content%}
+<div class="container">
+    <div class="row">
+        <div class="col-8 offset-2">
+            <div class="container shadow">
+                <div class="container my-5 py-3 m-2 p-2">
+                    <h2 class="my-2 py-2">Add Purchase</h2>
+                    <form action="" method="post">
+                        {% csrf_token%}
+                        {{purchase_form|crispy}}
+
+                        <button class="btn btn-primary my-3" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
